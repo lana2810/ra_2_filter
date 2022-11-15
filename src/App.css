@@ -1,0 +1,23 @@
+.container {
+  width: 80%;
+  margin: auto;
+}
+.toolbar {
+  padding-left: 0;
+}
+.li-item {
+  list-style-type: none;
+  display: inline-block;
+  border: 1px solid gray;
+  padding: 7px;
+  cursor: pointer;
+}
+.active {
+  background-color: aqua;
+}
+.li-item:not(:last-child) {
+  margin-right: 5px;
+}
+.table-card-view {
+  columns: 3;
+}
