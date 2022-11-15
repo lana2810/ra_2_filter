@@ -1,10 +1,10 @@
 image: Ubuntu1804 # образ для сборки
 
-stack: node 12 # окружение
+stack: node 14 # окружение
 
 branches:
   only:
-    - master # ветка git
+    - main # ветка git
 
 cache: node_modules # кеширование
 
@@ -21,4 +21,4 @@ deploy_script: # скрипт развёртывания
   - git config --global user.name AppVeyor
   - git config --global user.email ci@appveyor.com
   - echo "https://$GITHUB_TOKEN:x-oauth-basic@github.com" > "$HOME/.git-credentials"
-  - npx push-dir --dir=dist --branch=gh-pages --force --verbose
+  - npx push-dir --dir=build --branch=gh-pages --force --verbose
